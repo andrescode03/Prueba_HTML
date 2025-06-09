@@ -1,0 +1,132 @@
+:root {
+  --negro-fondos: #000;
+  --h2-color: #050505c0;
+  --gris-texto: #333333;
+  --blanco: #ffffff;
+  --fondo-claro: #f8f8f8;
+  --borde-claro: #e0e0e0;
+  --sombra-suave: rgba(0, 0, 0, 0.08);
+  --sombra-media: rgba(0, 0, 0, 0.15);
+  --transicion-rapida: 0.2s ease-in-out;
+}
+
+body {
+  font-family: 'Helvetica', sans-serif;
+  margin: 0;
+  background-color: var(--fondo-claro);
+  color: var(--gris-texto);
+}
+
+/* HEADER */
+.header {
+  background-color: var(--negro-fondos);
+  color: var(--blanco);
+  padding: 1rem;
+  text-align: center;
+}
+
+.header__title {
+  margin: 0;
+}
+
+.nav {
+  margin-top: 1rem;
+}
+
+.nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--blanco);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+  color: #ff9633;
+}
+
+/* SECCIONES */
+.section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.section__title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section__text {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* GRID DE PROYECTOS */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+/* DIV (ITEM)*/
+.item {
+  background-color: var(--blanco);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px var(--sombra-suave);
+  transition: transform var(--transicion-rapida);
+}
+
+.item:hover {
+  transform: scale(1.03);
+}
+
+.item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.item__link{
+    text-decoration: none;
+    color: #000000;
+}
+.item__link:hover{
+    color: #ff9633;
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--negro-fondos);
+  color: var(--blanco);
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer__text {
+  margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
